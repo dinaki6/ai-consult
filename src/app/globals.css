@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #29292D;
+  --foreground: #f2eff0;
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "ss01" on, "cv11" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #6B1428;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #29292D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A4A52;
+  border: 2px solid #29292D;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B1428;
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell px-5 sm:px-8;
+  }
+
+  .label-mono {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-wine-soft/80;
+  }
+
+  .panel {
+    @apply rounded-2xl border border-white/10 bg-white/[0.02];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-semibold transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wine-soft/60 focus-visible:ring-offset-2 focus-visible:ring-offset-graphite;
+  }
+
+  .btn-primary {
+    @apply btn bg-wine text-white shadow-[0_0_30px_-8px_rgba(107,20,40,0.6)] hover:bg-wine-hover hover:shadow-[0_0_40px_-6px_rgba(107,20,40,0.75)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/15 bg-white/[0.02] text-white hover:border-wine-soft/40 hover:bg-white/[0.05] hover:text-wine-soft;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-graphite-800/80 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 transition focus:border-wine-soft/60 focus:outline-none focus:ring-2 focus:ring-wine-soft/15;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* MDX / article typography                                            */
+/* ------------------------------------------------------------------ */
+
+.prose-case > *:first-child {
+  margin-top: 0;
+}
+
+.prose-case h1,
+.prose-case h2.case-section-title {
+  @apply mb-5 mt-14 flex items-start gap-4 text-[1.6rem] font-semibold leading-tight tracking-tight text-white sm:text-[1.9rem];
+}
+
+.prose-case h1::before,
+.prose-case h2.case-section-title::before {
+  content: "";
+  @apply mt-1.5 block h-7 w-[3px] shrink-0 rounded-full bg-wine;
+  box-shadow: 0 0 18px rgba(200, 131, 139, 0.45);
+}
+
+.prose-case h2 {
+  @apply mb-4 mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl;
+}
+
+.prose-case h3 {
+  @apply mb-3 mt-8 text-lg font-semibold text-white;
+}
+
+.prose-case p {
+  @apply mt-5 text-[17px] leading-8 text-slate-300;
+}
+
+.prose-case strong {
+  @apply font-semibold text-white;
+}
+
+.prose-case a {
+  @apply text-wine-soft underline decoration-wine-soft/40 underline-offset-4 transition hover:decoration-wine-soft;
+}
+
+.prose-case ul {
+  @apply mt-5 space-y-3 pl-0;
+}
+
+.prose-case ul li {
+  @apply relative list-none pl-6 text-[16px] leading-7 text-slate-300;
+}
+
+.prose-case ul li::before {
+  content: "";
+  @apply absolute left-0 top-[0.72em] h-1.5 w-1.5 rounded-full bg-wine-soft;
+  box-shadow: 0 0 10px rgba(200, 131, 139, 0.55);
+}
+
+.prose-case ol {
+  @apply mt-5 list-decimal space-y-3 pl-6 text-[16px] leading-7 text-slate-300;
+}
+
+.prose-case ol li::marker {
+  @apply font-mono text-sm text-wine-soft;
+}
+
+.prose-case blockquote {
+  @apply my-8 rounded-r-xl border-l-2 border-wine bg-wine/[0.08] px-6 py-5 text-lg italic leading-8 text-slate-200;
+}
+
+.prose-case blockquote p {
+  @apply m-0;
+}
+
+.prose-case hr {
+  @apply my-10 border-white/10;
+}
+
+.prose-case code {
+  @apply rounded-md border border-white/10 bg-white/[0.06] px-1.5 py-0.5 font-mono text-[0.85em] text-wine-soft;
+}
+
+.prose-case pre {
+  @apply my-6 overflow-x-auto rounded-xl border border-white/10 bg-black/40 p-5;
+}
+
+.prose-case pre code {
+  @apply border-0 bg-transparent p-0 text-sm text-slate-200;
+}
+
+.prose-case table {
+  @apply my-6 w-full border-collapse text-left text-sm;
+}
+
+.prose-case th {
+  @apply border-b border-white/15 px-3 py-3 font-mono text-[11px] uppercase tracking-wider text-wine-soft/80;
+}
+
+.prose-case td {
+  @apply border-b border-white/5 px-3 py-3 text-slate-300;
+}
