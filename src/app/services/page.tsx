@@ -398,7 +398,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="panel relative overflow-hidden p-6 shadow-card sm:p-8">
+          <div className="panel relative min-w-0 self-start p-6 shadow-card sm:p-8">
             <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-wine/60 to-transparent" />
             <div className="mb-6 flex items-center justify-between">
               <p className="text-sm font-semibold text-white">Оставить заявку</p>
