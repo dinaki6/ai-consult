@@ -398,11 +398,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="panel relative min-w-0 self-start p-6 shadow-card sm:p-8">
+          <div className="relative min-w-0 self-start overflow-hidden rounded-2xl bg-[#F5F6F7] p-6 text-[#202428] shadow-card sm:p-8">
             <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-wine/60 to-transparent" />
             <div className="mb-6 flex items-center justify-between">
-              <p className="text-sm font-semibold text-white">Оставить заявку</p>
-              <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-slate-500">ответ ~2 часа</span>
+              <p className="text-sm font-semibold">Оставить заявку</p>
+              <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#525D66]">ответ ~2 часа</span>
             </div>
             <ContactForm />
           </div>

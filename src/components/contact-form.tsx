@@ -10,16 +10,16 @@ export function ContactForm() {
         width="650"
         height="900"
         frameBorder="0"
-        className="mx-auto block w-full max-w-[650px] border-0"
+        className="mx-auto block w-full max-w-[650px] border-0 bg-[#F5F6F7] [color-scheme:light]"
       />
       <Script src="https://forms.yandex.ru/_static/embed.js" strategy="afterInteractive" />
-      <p className="mt-4 text-center text-xs leading-5 text-slate-400">
+      <p className="mt-4 text-center text-xs leading-5 text-[#525D66]">
         Если форма не загрузилась,{" "}
         <a
           href="https://forms.yandex.ru/u/6af70149c45c074729a2fa46"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-wine-soft underline underline-offset-4"
+          className="text-wine underline underline-offset-4"
         >
           откройте её в новой вкладке
         </a>.
