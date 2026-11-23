@@ -10,7 +10,7 @@ type GuideRowProps = {
 export function GuideRow({ guide }: GuideRowProps) {
   return (
     <Link
-      href={`/knowledge/${guide.slug}`}
+      href={guide.path}
       className="group grid gap-3 border-b border-white/[0.07] py-6 transition md:grid-cols-[150px_1fr_auto] md:items-start md:gap-6"
     >
       <div className="flex flex-wrap items-center gap-2 md:pt-1">

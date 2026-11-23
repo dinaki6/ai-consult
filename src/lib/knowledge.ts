@@ -8,6 +8,7 @@ const KNOWLEDGE_DIRECTORY = path.join(process.cwd(), "content", "knowledge");
 export type GuideFrontmatter = {
   title: string;
   excerpt?: string;
+  path?: string;
   date: string;
   category?: string;
   level?: string;
@@ -17,6 +18,7 @@ export type GuideFrontmatter = {
 
 export type Guide = {
   slug: string;
+  path: string;
   title: string;
   excerpt: string;
   date: string;
@@ -50,6 +52,7 @@ function readGuideFile(fileName: string): Guide {
 
   return {
     slug,
+    path: frontmatter.path ?? `/knowledge/${slug}`,
     title: frontmatter.title ?? slug,
     excerpt: frontmatter.excerpt?.trim() || createExcerpt(content),
     date: frontmatter.date ?? "",

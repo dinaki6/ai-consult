@@ -75,7 +75,7 @@ export default function KnowledgePage() {
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400">{startGuide.excerpt}</p>
               </div>
             </div>
-            <Link href={`/knowledge/${startGuide.slug}`} className="btn-ghost shrink-0 !px-5 !py-2.5 text-xs">
+            <Link href={startGuide.path} className="btn-ghost shrink-0 !px-5 !py-2.5 text-xs">
               Открыть материал
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
