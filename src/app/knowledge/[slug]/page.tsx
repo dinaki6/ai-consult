@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ContentPage } from "@/components/content-page";
 import { GuideRow } from "@/components/guide-row";
 import { getAllGuides, getGuideBySlug, getGuideSlugs } from "@/lib/knowledge";
@@ -38,6 +38,8 @@ export default function GuidePage({ params }: GuidePageProps) {
   if (!guide) {
     notFound();
   }
+
+  if (guide.path !== `/knowledge/${guide.slug}`) permanentRedirect(guide.path);
 
   const related = getAllGuides()
     .filter((item) => item.slug !== guide.slug)
